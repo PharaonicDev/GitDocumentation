@@ -1,0 +1,311 @@
+﻿0-pwd
+-->used to  inform you the path
+
+1-git init
+-->track the change inside the folder(git watch)
+2-ls
+--> listen to directory   
+3- ls -la
+-->Show hidden files
+4-ls -la .git 
+--> list of files that git use to tracking
+
+5-git add .
+-->add any changes inside my directory
+
+6-git commit -m "your first  commit" 
+-->commit changes to the repository with a message
+--commit message--
+-short single-line summary (less than 50 characters)
+-optionally followed by blank line and amore complete discription
+-keep each line to less than 72 characters
+- write commit messages in present tense, not past tense
+
+7-git log
+--> show us the commit messages , Date and Auther
+
+8-git help log
+
+9-git log -n 2
+
+-->give me number of  commit  messages
+10-cd .git
+-->Enter inside the hidden folder git
+11-cat head
+-->ref:refs/heads/master]
+
+12-git status
+-->it will give us the diffrent bettween working derictory and the staging index
+13- git diff
+-->used to comparein whats in the repository
+14- git diff --staged (version:1.7 og git) == git diff --cached
+its the option to diff that tells it to look at whats in the 
+staging index  and comparing it to  repository
+15- git rm
+-->short cut for git remove it used whaen deleted files from our projegt 
+and want to added changes to our repository
+
+
+16- git mv (NameOfFile)(nameOfSecound)
+-->we used it if we want to renamed file 
+
+
+17- git diff --color-words
+-->used to give the changed with diffrent colors
+18- git rest HEAD (name of file)
+-->if you put something in the staging area that you dont 
+want there, you can take it out bu using it 
+
+19-git commit --amend -m ""
+-->change the message
+
+20-git diff --staged
+
+
+21- git reset
+
+--soft
+-does not change staging undex or working directory
+
+
+--mixed(default)
+-changes staging index to match repository
+-dose not change working directory
+
+
+--hard
+-changes staging index and working directory to match repository
+
+
+
+22- 1-cat .git/HEAD
+    2- cat .git/refs/heads/master
+
+--> to give you commit changes
+
+23- git clean
+  1-git clean -n :
+  2-git clean -f :
+
+it used when we want git do not track(remove)  anew files on our directory
+ it dose not stored in our Repo and staging index
+
+24- nano .gitignore
+-->create ignore file  and put yout files in .gitignore folder
+like video / zip / photoshop
+
+
+25- git rm --cached (name of file)
+ --> used when  git track afile but you want it to stop trach the changes 
+happend in it 
+
+
+
+26-  touch (path/.gitkeep)
+--> git dosnot trach empty folder but if we want to trach them 
+we used touch to force him to see our empty folders
+
+
+27-git log --oneline
+--> give you all the commits on one line  also we can use the formts
+--git log --since"date"
+--git log -n=3
+
+
+
+28-git log (number of commit/hash/) .. index.html
+--> to navigate bettween the commits and see what changed in the file 
+
+29-git log -p 
+-->path option show us adiff of what actually changed in each one of these 
+
+
+30- git log --stat --summary
+
+-->taht will tell you statistics about what changed in each one 
+
+
+
+31- git log --oneline --graph --all --decorate
+
+--> it gives us anice compact list of commit changes 
+show  all the branches that take place and even tells us right 
+now that this is where the Head is pointer 
+
+
+ 
+32-git show (followed with hash no)
+--> show us what changed  happend 
+
+
+33-git diff (hash) (name of file)
+-->used to compared bettween  commits 
+in staging index and repo
+
+
+34- git branch
+--> show you the branches you working on 
+
+35- git branch (nameOfBranch)
+-->used to creat branch with anew feature
+
+
+
+36- git chekout (nameOfBranch)
+--> used to switching  bettween branches
+
+
+
+37-git diff (branch1)..(branch2) 
+
+-->used to find the diffrent chancges in the braches
+
+
+38-git diff --color-words (branch1)..(branch2) 
+
+-->used to find the diffrent chancges in the braches with color words
+39-git branch -m (name of branch) (new name of branch)
+--> used to changed brach name
+ 
+40- git branch -d or git branch --delete
+--> used to delet branch
+
+
+
+
+
+41- git merge (name of branch:you want merge with master)
+-->used to merging  branches
+
+42-git mergetool --tool-help
+-->give you atool you can used in merging
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+43-git stash save "your commit "
+-->stash is aplace where we can store changes temporarily without having to commit them
+ 
+44-git stash list 
+--> show us alist of the things that are in the stash
+
+
+
+45-git stash  show {name of stash}
+--> show us the edits on stash(درج)
+
+
+
+46-git stash  show -p  {name of stash}
+
+-->(-p): A patch is asection of code that you can apply to diffrent things to modify
+them and change them 
+
+
+47- git slash apply or git slash pop  stash{0}
+
+--> them will pull whats in the stash out , and put it in the working 
+directory
+
+the diffrent is git slash pop remove it from the slash
+git slash apply leave the slash acopy there 
+
+by default both of them apply one 
+
+48-git stash drop  stash{0}
+-->drop(delete) aparticular  stash
+
+49-git stash  clear
+--> clear all of the stashes 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++Remote(التحكم عن بعد)++++++++++++++++++++++++
+=>First
+50- 1- create your repository with anew name on githup
+    2- git init 
+    3- git add
+    
+51- git remote 
+--> remove your repository that you have created
+
+=>PUSH(step tot make  your repo avaliable  for all to see it )
+
+52- git push -u origin master
+
+53- git branch -r 
+-->show you remote branch
+
+54- git branch -a
+-->show you both ones and remote ones 
+
+55- git clone url(رابط الملف الذى تريد تحميلة وتنزيلة على جهازك)  (new name)
+استنساخ 
+-->used to git a copy of project on githup to used it or work or edit on it
+
+ 
+56-git push
+-->push changes from master branch to orign(remote one)
+=>fetch
+fetch: is what sychronizes origin/master with whatever is on remote repository
+
+
+57-git fetch
+
+58-git merge
+
+59-git pull = git merge + git fetch
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+     +++++++++++++++++++[collaboration workflow]+++++++++++++++++++++++++++
+=>MYWORK
+1-git checkout master [for sure that iam in master brunch]
+2- git fetch          [turns out that there was work done overnight by some of my coworker]
+3-git merge origin/master
+                      [it told me what on the remote repository , and i am ready to start my work
+                         iam going to do the work on my new feature in the separate branch, and that way it wont  interfere with anything that going on with master]
+4-git checkout -b      [ will check it out as anew branch , or create the branch and switch to it ]
+5- git add           [add it to the staging area , and then i commit it ]
+6-git commit -m ""   [at thise point my changes are now on my local repository inside my feedback from branch]
+7- git fetch        [to see if changes happend from my coworker]
+8- git push -u origin  [push my branch up to origin , and iam pushing the whole branch, 
+ the branch dosenot exist on the remote server untill  i push it ]
+->now my work is on the remote repository , now my coworkers can all see it 
+
+                ---------------------------------------------
+=>coworkers
+1-git checkout master
+2- git fetch
+3-git branch -r            [will show them  that new branch and they can see it ]
+4- git merge orign/master [now they read to take alook on my work ]
+5- git checkout -b          []
+6-git log [they are going use git log and find commit that  i made ]
+7- git show {commit hash number}
+                           [take alook at the actual commit itself]
+8- git commit -am ""
+                             [the make changes and  add both commit &&  changes to staging area  but in the local machine ]
+9-git fetch   [to  make sure no new changes come in  ]
+10-git push  [git will send to me email to say  your cowork adding changes ]
+
+              ----------------------------------------------
+
+=>MYWORK
+1- git fetch [to see the changes]
+2- git log -p  [-p: option for patch, iam asking to show my every thing the diffrent from mine and coworker ]
+
+3-git merge origin
+4-git checkout master   
+5-git fetch
+6-git merge
+7-git push  [now my work is on the remote in the master branch  wherw all of my coworkers can see it ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
